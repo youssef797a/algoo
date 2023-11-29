@@ -1,0 +1,24 @@
+ALGORITHM firstalgo
+VAR
+    str :STRING;
+    nb_char :INTEGER : 0;
+    nb_word :INTEGER : 0;
+    nb_vow :INTEGER : 0;
+    c : CHAR := ""
+BEGIN
+    Write("Give me a sentence.");
+    Read(str);
+    WHILE (c <> ".") DO
+        Read(c);
+        nb_char :=nb_char + 1;
+        IF (c = " ") THEN
+            nb_word :=nb_word + 1;
+        END_IF
+        IF (c = "a" OR c = "e"  OR c = "i" OR c = "o" OR c = "u") THEN
+            nb_vow = nb_vow +1;
+        END_IF
+    END_WHILE
+    Write("Number of characters: ",nb_char+1);
+    Write("Number of words: ", nb_word+1);
+    Write("Number of vowels: " nb_vow);
+END
